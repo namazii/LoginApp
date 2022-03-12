@@ -43,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6081B027D7518E00E19986 /* LoginApp */,
+				BC6081BF27D7518E00E19986 /* Info.plist */,
 				BC6081AF27D7518E00E19986 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +66,6 @@
 				BC6081B727D7518E00E19986 /* Main.storyboard */,
 				BC6081BA27D7518E00E19986 /* Assets.xcassets */,
 				BC6081BC27D7518E00E19986 /* LaunchScreen.storyboard */,
-				BC6081BF27D7518E00E19986 /* Info.plist */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85D2483FS7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = /Users/namazi/Desktop/intensive/LoginApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +324,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85D2483FS7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = /Users/namazi/Desktop/intensive/LoginApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
