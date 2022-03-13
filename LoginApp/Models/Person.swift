@@ -6,12 +6,16 @@
 //
 
 struct Person {
-    let name = "Nazar"
-    let surname = "Tkachenko"
-    let age = 22
-    let aboutMe = """
-    I love McDonalds
-    I don't like Burger King
-    I love KFC
-    """
+    let name: String
+    let surname: String
+    let age: Int
+    let iLikeIt: String
+    static func aboutMe() -> Person {
+        Person(
+            name: "Nazar",
+            surname: "Tkachenko",
+            age: 22,
+            iLikeIt: "KFC"
+        )
+    }
 }

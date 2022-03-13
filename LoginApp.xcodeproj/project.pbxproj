@@ -15,6 +15,7 @@
 		BC6081BE27D7518E00E19986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6081BC27D7518E00E19986 /* LaunchScreen.storyboard */; };
 		BCBA2F6D27DDDD1A001430E4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBA2F6C27DDDD1A001430E4 /* User.swift */; };
 		BCBA2F6F27DDDD3D001430E4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBA2F6E27DDDD3D001430E4 /* Person.swift */; };
+		BCBA2F7127DE398B001430E4 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBA2F7027DE398B001430E4 /* AboutMeViewController.swift */; };
 		BCF2BE6D27D8E4D4009FA095 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2BE6C27D8E4D4009FA095 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		BC6081BF27D7518E00E19986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCBA2F6C27DDDD1A001430E4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCBA2F6E27DDDD3D001430E4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		BCBA2F7027DE398B001430E4 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		BCF2BE6C27D8E4D4009FA095 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +50,7 @@
 			children = (
 				BC6081B527D7518E00E19986 /* LoginViewController.swift */,
 				BCF2BE6C27D8E4D4009FA095 /* WelcomeViewController.swift */,
+				BCBA2F7027DE398B001430E4 /* AboutMeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				BCBA2F6F27DDDD3D001430E4 /* Person.swift in Sources */,
 				BCF2BE6D27D8E4D4009FA095 /* WelcomeViewController.swift in Sources */,
+				BCBA2F7127DE398B001430E4 /* AboutMeViewController.swift in Sources */,
 				BC6081B627D7518E00E19986 /* LoginViewController.swift in Sources */,
 				BC6081B227D7518E00E19986 /* AppDelegate.swift in Sources */,
 				BCBA2F6D27DDDD1A001430E4 /* User.swift in Sources */,

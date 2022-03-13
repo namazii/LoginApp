@@ -6,7 +6,10 @@
 //
 
 struct User {
-    let userName = "User"
-    let password = "Password"
-    let person = Person()
+    let userName: String
+    let password: String
+    static func userData() -> User {
+        User(userName: "User", password: "Password")
+    }
+    
 }

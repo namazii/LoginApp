@@ -13,14 +13,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     //MARK: - Private properties
-    private let user = User()
+    private let user = User.userData()
+    private let person = Person.aboutMe()
     
     //Mark: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
-            return
+        guard let tapBarController = segue.destination as? UITabBarController else { return }
+        
+        
+        for viewController in tapBarController.children {
+            if let welcomeVC = viewController as? WelcomeViewController{
+                welcomeVC.welcomeUserLabel = person.name + " " + person.surname
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
+                aboutUserVC.userName = person.name
+                aboutUserVC.userSurname = person.surname
+                aboutUserVC.userAge = person.age
+                aboutUserVC.iLikeIt = person.iLikeIt
+            }
         }
-        welcomeVC.user = user.userName
     }
     
     //MARK: - IB Actions
@@ -34,7 +45,7 @@ class LoginViewController: UIViewController {
                     )
                   return
               }
-        performSegue(withIdentifier: "openWelcomeVC", sender: nil)
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     
