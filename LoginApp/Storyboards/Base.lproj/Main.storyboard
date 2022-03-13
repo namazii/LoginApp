@@ -3,6 +3,8 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -97,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="-596" y="-268"/>
         </scene>
-        <!--Item-->
+        <!--Welcome View Controller-->
         <scene sceneID="Qla-VV-kci">
             <objects>
                 <viewController id="WCh-cK-LyF" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,7 +154,10 @@
                             <constraint firstItem="HUN-tO-U6W" firstAttribute="top" secondItem="opP-me-zDM" secondAttribute="bottom" constant="54" id="jUV-TX-rg0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0gS-q6-NRK"/>
+                    <tabBarItem key="tabBarItem" id="0gS-q6-NRK">
+                        <color key="badgeColor" systemColor="systemRedColor"/>
+                        <imageReference key="selectedImage" image="house" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="welcomeLabel" destination="opP-me-zDM" id="XzH-E2-ypX"/>
                     </connections>
@@ -169,7 +174,6 @@
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WFV-gz-LU8">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="WCh-cK-LyF" kind="relationship" relationship="viewControllers" id="dRq-cB-Q14"/>
@@ -208,8 +212,21 @@
                     <view key="view" contentMode="scaleToFill" id="Iky-44-B8l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1y-w8-bdB">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h1y-w8-bdB" secondAttribute="height" multiplier="15:8" id="Uf0-sQ-JMv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uVQ-PM-o0d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h1y-w8-bdB" firstAttribute="centerY" secondItem="Iky-44-B8l" secondAttribute="centerY" id="6Kw-V5-FCC"/>
+                            <constraint firstItem="h1y-w8-bdB" firstAttribute="centerX" secondItem="Iky-44-B8l" secondAttribute="centerX" id="PcT-MO-Uov"/>
+                            <constraint firstItem="h1y-w8-bdB" firstAttribute="height" secondItem="Iky-44-B8l" secondAttribute="height" multiplier="0.225352" id="ue8-ec-80E"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dWG-Ww-VCT"/>
                 </viewController>
@@ -221,7 +238,9 @@
         <scene sceneID="Zbl-Nn-GrZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eFy-8r-6Jy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Lm8-rv-p03"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person" catalog="system" id="Lm8-rv-p03">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="rN3-61-Ktm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pie-sd-kUR">
@@ -239,8 +258,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

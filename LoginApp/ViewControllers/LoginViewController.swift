@@ -13,22 +13,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     //MARK: - Private properties
-    private let user = "User"
-    private let password = "Password"
-    
+    private let user = User()
     
     //Mark: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {
             return
         }
-        welcomeVC.user = user
+        welcomeVC.user = user.userName
     }
     
     //MARK: - IB Actions
     @IBAction func loginInButtonPressed() {
-        guard userNameTextField.text == user,
-              passwordTextField.text == password else {
+        guard userNameTextField.text == user.userName,
+              passwordTextField.text == user.password else {
                   showAlert(
                     title: "Invalid login or password",
                     message: "Please, enter correct login and password",

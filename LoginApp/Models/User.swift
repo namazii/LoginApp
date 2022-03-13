@@ -5,4 +5,8 @@
 //  Created by Назар Ткаченко on 13.03.2022.
 //
 
-import Foundation
+struct User {
+    let userName = "User"
+    let password = "Password"
+    let person = Person()
+}
